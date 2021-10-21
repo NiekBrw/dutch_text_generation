@@ -1,1 +1,3 @@
-# Dutch Text Generation to Combat Class Imbalance
+# Experiment 1
+
+Compare three English text generation methods on Dutch tweets.
