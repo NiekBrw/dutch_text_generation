@@ -4,6 +4,10 @@
 ```sh
   tensorflow-gpu == 1.15
   nltk==3.6.4
+  numpy
+  matplotlib
+  scipy
+  tqdm
 ```
 
 #### How to run
