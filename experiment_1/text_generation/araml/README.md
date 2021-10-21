@@ -2,10 +2,10 @@
 
 #### Dependencies
 ```sh
-Python 3.6
-tensorflow == 1.15
-numpy == 1.19.5
-scipy == 1.5.4
+  Python 3.6
+  tensorflow == 1.15
+  numpy == 1.19.5
+  scipy == 1.5.4
 ```
 
 #### How to run
