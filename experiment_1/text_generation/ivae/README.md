@@ -6,6 +6,11 @@
   torch==1.9.1
 ```
 
+#### Summary
+Train the iVAE<sub>MI</sub> method on Dutch tweet data.
+
+Task for testing: generate 4000 samples based on the real test data.
+
 #### How to run
 
 Preprocessing
