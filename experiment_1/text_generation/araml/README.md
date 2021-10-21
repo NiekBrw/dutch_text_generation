@@ -3,6 +3,8 @@
 #### Dependencies
 ```sh
   tensorflow-gpu == 1.15
+  numpy
+  scipy
 ```
 
 #### How to run
