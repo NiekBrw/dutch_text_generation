@@ -1,1 +1,1 @@
-# dutch_text_generation
+# Dutch Text Generation to Combat Class Imbalance
