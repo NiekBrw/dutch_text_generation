@@ -2,8 +2,7 @@
 
 #### Dependencies
 ```sh
-  Python 3.6
-  tensorflow == 1.15
+  tensorflow-gpu == 1.15
   numpy == 1.19.5
   scipy == 1.5.4
 ```
