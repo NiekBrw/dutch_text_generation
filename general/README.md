@@ -2,10 +2,10 @@
 
 ### Data Collection
 #### Dependencies
-'''sh
+```sh
   snscrape
   pandas
-'''
+```  
 
 #### Summary
 Collecting, pseudonimizing and saving Dutch tweets on COVID-19 and the benefits affair (_"Toeslagenaffaire"_).
@@ -15,7 +15,7 @@ Go through the data_collection.ipynb notebook.
 
 ### Data Inspection
 #### Dependencies
-'''sh
+```sh
   pandas
   numpy
   ipywidgets
@@ -26,7 +26,7 @@ Go through the data_collection.ipynb notebook.
   nltk
   wordcloud
   palettable
-'''
+```  
 
 #### Summary
 Inspecting the tweet data. Looking at statistics, users, timelines and wordclouds.
@@ -36,10 +36,10 @@ Go through the data_inspection.ipynb notebook.
 
 ### Data Preprocessing
 #### Dependencies
-'''sh
+```sh
   pandas
   emoji
-'''
+```  
 
 #### Summary
 General preprocessing of the data, by removing duplicates and overlap in the majority and minority sets. Also removing emojis and some of the user mentions and hashtags, and only keeping tweets that are between 2 and 40 words after preprocessing.
