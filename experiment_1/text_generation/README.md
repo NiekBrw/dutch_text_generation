@@ -1,1 +1,1 @@
-# Dutch Text Generation to Combat Class Imbalance
+# Text Generation Methods
