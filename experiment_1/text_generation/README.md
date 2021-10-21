@@ -1,1 +1,1 @@
-# Text Generation Methods
+## Text Generation Methods
