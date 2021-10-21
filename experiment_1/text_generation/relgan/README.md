@@ -10,6 +10,11 @@
   tqdm
 ```
 
+#### Summary
+Train the RelGAN method on Dutch tweet data.
+
+Task for testing: generate 4000 samples.
+
 #### How to run
 ```sh
   python covid_relgan.py [job_id] [gpu_id]
