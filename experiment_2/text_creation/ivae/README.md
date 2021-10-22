@@ -15,12 +15,12 @@ Task for testing: generate 4000 samples based on the real test data.
 
 Preprocessing
 ```sh
-  python preprocess_ivae.py --vocabfile data/vocab.dict --testfile data/test.txt --outputfile data
+  python preprocess_ivae_ex2.py --vocabfile data/vocab.dict --testfile data/test.txt --outputfile data
 ```
 
 Generating
 ```sh
-  python train_ivae.py --model mle_mi --test --train_from results_mle_mi/040.pt
+  python train_ivae_ex2.py --model mle_mi --test --train_from results_mle_mi/040.pt
 ```
 
 #### Credits
