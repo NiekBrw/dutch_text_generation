@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import tensorflow as tf
-from tensorflow.python.ops import tensor_array_ops, control_flow_ops
 from tensorflow.python.ops.rnn_cell_impl import GRUCell
-import numpy as np
 
 # Linear layer
 def linear(input_, output_size, scope=None):

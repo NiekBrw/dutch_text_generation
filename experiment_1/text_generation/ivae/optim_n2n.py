@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
-
-import sys
-import os
-
-import argparse
-import json
-import random
-import shutil
-
 import torch
-from torch import cuda
 from torch.autograd import Variable
-import torch.nn as nn
-import torch.nn.functional as F
 import numpy as np
 
 

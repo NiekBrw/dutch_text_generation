@@ -9,7 +9,6 @@ from tensorflow.python.framework import ops
 from tensorflow.python.ops import array_ops
 from tensorflow.python.ops import nn_ops
 from tensorflow.python.ops import math_ops
-import tensorflow as tf
 
 __all__ = ["sequence_loss"]
 

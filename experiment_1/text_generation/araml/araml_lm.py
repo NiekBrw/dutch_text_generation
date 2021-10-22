@@ -1,7 +1,6 @@
 import numpy as np
 import tensorflow as tf
 import random
-import os
 import math
 import argparse
 from araml_dataloader import Gen_Data_loader, Dis_dataloader
@@ -15,23 +14,20 @@ import lm.lm_train as lm_train
 start_time = time.time()
 
 print('Default GPU Device:{}'.format(tf.test.gpu_device_name()))
-SEED = 5 #int(time.time()) # random seed
+SEED = 5
 
 import sys
 print(sys.version)
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--task_name', default='coco', type=str, required=True,
-                    help='The name of task, i.e. coco or emnlp')
+parser.add_argument('--task_name', default='covid', type=str, required=True,
+                    help='The name of task, i.e. covid')
 
 args = parser.parse_args()
 
-if args.task_name == 'coco':
-    from conf_coco import gen_config, disc_config, adv_config, lm_config
-    print('coco')
-else:
-    from conf_emnlp import gen_config, disc_config, adv_config, lm_config
-    print('emnlp')
+if args.task_name == 'covid':
+    from conf_covid import gen_config, disc_config, adv_config, lm_config
+    print('covid')
 
 #  Generator Hyper-Parameters Initialization
 EMB_DIM = gen_config.EMB_DIM # embedding dimension
@@ -73,7 +69,7 @@ generated_num = adv_config.generated_num
 result_generated_num = adv_config.result_generated_num
 generated_num_pre = adv_config.generated_num_pre
 restore = adv_config.restore # whether to restore the checkpoint
-vocab_size = adv_config.vocab_size # vocab size of coco
+vocab_size = adv_config.vocab_size # vocab size of covid
 sample_size = adv_config.sample_size # the number of samples from Ps
 gen_update_batch = adv_config.gen_update_batch
 dis_update_batch = adv_config.dis_update_batch

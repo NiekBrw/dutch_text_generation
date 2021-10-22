@@ -2,10 +2,8 @@ import argparse
 from utils.utils_dec import pp
 import models.conf as models
 import os
-# from oracle.oracle_gan.oracle_train import oracle_train
 from real.real_gan.real_train import real_train
 from utils.models.OracleLstm import OracleLstm
-# from oracle.oracle_gan.oracle_loader import OracleDataLoader
 from real.real_gan.real_loader import RealDataLoader
 from utils.text_process import text_precess
 
@@ -50,7 +48,7 @@ parser.add_argument('--head-size', default=512, type=int, help="head size or mem
 parser.add_argument('--num-heads', default=2, type=int, help="number of heads")
 
 # Data
-parser.add_argument('--dataset', default='oracle', type=str, help='[oracle, image_coco, emnlp_news]')
+parser.add_argument('--dataset', default='covid_gen_train_text', type=str, help='[covid_gen_train_text]')
 parser.add_argument('--vocab-size', default=5000, type=int, help="vocabulary size")
 parser.add_argument('--start-token', default=0, type=int, help="start token for a sentence")
 parser.add_argument('--seq-len', default=20, type=int, help="sequence length: [20, 40]")
@@ -67,23 +65,7 @@ def main():
     config = vars(args)
 
     # train with different datasets
-    if args.dataset == 'oracle':
-        oracle_model = OracleLstm(num_vocabulary=args.vocab_size, batch_size=args.batch_size, emb_dim=args.gen_emb_dim,
-                                  hidden_dim=args.hidden_dim, sequence_length=args.seq_len,
-                                  start_token=args.start_token)
-        oracle_loader = OracleDataLoader(args.batch_size, args.seq_len)
-        gen_loader = OracleDataLoader(args.batch_size, args.seq_len)
-
-        generator = models.get_generator(args.g_architecture, vocab_size=args.vocab_size, batch_size=args.batch_size,
-                                         seq_len=args.seq_len, gen_emb_dim=args.gen_emb_dim, mem_slots=args.mem_slots,
-                                         head_size=args.head_size, num_heads=args.num_heads, hidden_dim=args.hidden_dim,
-                                         start_token=args.start_token)
-        discriminator = models.get_discriminator(args.d_architecture, batch_size=args.batch_size, seq_len=args.seq_len,
-                                                 vocab_size=args.vocab_size, dis_emb_dim=args.dis_emb_dim,
-                                                 num_rep=args.num_rep, sn=args.sn)
-        oracle_train(generator, discriminator, oracle_model, oracle_loader, gen_loader, config)
-
-    elif args.dataset in ['covid_gen_train_text']:
+    if args.dataset in ['covid_gen_train_text']:
         data_file = os.path.join(args.data_dir, '{}.txt'.format(args.dataset))
         seq_len, vocab_size = text_precess(data_file)
         config['seq_len'] = seq_len

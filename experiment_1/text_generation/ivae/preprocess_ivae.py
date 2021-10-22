@@ -4,12 +4,10 @@
 """Create the data for the LSTM.
 """
 
-import os
 import sys
 import argparse
 import numpy as np
 import h5py
-import itertools
 from collections import defaultdict
 
 

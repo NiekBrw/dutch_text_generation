@@ -1,20 +1,18 @@
 
 import sys
 import os
-from preprocess_ptb import Indexer
+from preprocess_ivae_ex2 import Indexer
 import torch
 import argparse
 import logging
-from data import Dataset
 import numpy as np
-import math
 from tqdm import tqdm
 import kenlm
 
 parser = argparse.ArgumentParser()
 
 # global parameters
-parser.add_argument('--train_file', default='data/train.txt')
+parser.add_argument('--train_file', default='data/covid_gen_train_text.txt')
 parser.add_argument('--results_folder_prefix', default='results_')
 parser.add_argument('--train_from_epo', default=40, type=int)
 parser.add_argument('--seed', default=0, type=int)
@@ -35,7 +33,7 @@ else:
 
 # parameters
 vocab = Indexer()
-vocab.load_vocab('data/ptb.dict')
+vocab.load_vocab('data/vocab.dict')
 vocab_size = len(vocab.idx2word)
 print('Word vocab size: %d' % vocab_size)
 

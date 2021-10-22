@@ -1,5 +1,4 @@
 import tensorflow as tf
-# from tensorflow.contrib.layers.python.layers import layers
 from tensorflow.python.ops import variable_scope
 
 def output_projection_layer(num_units, num_symbols, num_samples, name="output_projection"):

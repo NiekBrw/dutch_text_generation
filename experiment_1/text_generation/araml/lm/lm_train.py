@@ -1,11 +1,7 @@
 import numpy as np
 import tensorflow as tf
-import sys
 import time
 import random
-import os
-
-# sys.path.append("..")
 
 from lm.lm_model import lm_model
 

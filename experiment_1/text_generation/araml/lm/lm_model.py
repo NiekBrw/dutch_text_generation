@@ -4,7 +4,6 @@ import lm.my_seq2seq as my_seq2seq
 import lm.my_loss as my_loss
 import lm.my_simple_decoder_fn as my_simple_decoder_fn
 
-from tensorflow.python.ops.nn import dynamic_rnn
 from tensorflow.python.ops.rnn_cell_impl import GRUCell
 from lm.my_output_projection import output_projection_layer
 from tensorflow.python.ops import variable_scope

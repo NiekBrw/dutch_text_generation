@@ -5,15 +5,12 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-# from tensorflow.contrib import layers
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import array_ops
 from tensorflow.python.ops import control_flow_ops
 from tensorflow.python.ops import math_ops
 from tensorflow.python.ops import rnn
-#import rnn
 from tensorflow.python.ops import tensor_array_ops
-from tensorflow.python.ops import variable_scope as vs
 
 __all__ = ["dynamic_rnn_decoder"]
 

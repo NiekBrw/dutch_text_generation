@@ -8,7 +8,7 @@ class adv_config(object):
     result_dir = 'res_covid'
     train_dir = 'train_covid'
     TOTAL_BATCH = 500 # Training batches in adversarial training
-    data_dir =  '../data' #'../data/coco'
+    data_dir =  '../data'
     positive_file = os.path.join(data_dir, 'covid_gen_train_ids.txt') # Training set directory
     negative_file = os.path.join(log_dir, 'generator_sample' + str(tau) + '.txt')
     vocab_file = os.path.join(data_dir, 'covid_gen_train_vocab.txt') # Vocabulary directory

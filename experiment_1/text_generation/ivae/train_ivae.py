@@ -1,8 +1,8 @@
 
 import sys
 import os
-from models_ptb import Decoder, Encoder, Nu_xz, Nu_z
-from preprocess_ptb import Indexer
+from models_ivae import Decoder, Encoder, Nu_xz, Nu_z
+from preprocess_ivae import Indexer
 import torch
 from torch import optim
 from itertools import chain
@@ -18,9 +18,9 @@ import time
 parser = argparse.ArgumentParser()
 
 # global parameters
-parser.add_argument('--train_file', default='../../../../data/ivae/ivae-train.hdf5')
-parser.add_argument('--val_file', default='../../../../data/ivae/ivae-val.hdf5')
-parser.add_argument('--test_file', default='../../../../data/ivae/ivae-test.hdf5')
+parser.add_argument('--train_file', default='data/ivae-train.hdf5')
+parser.add_argument('--val_file', default='.data/ivae/ivae-val.hdf5')
+parser.add_argument('--test_file', default='data/ivae/ivae-test.hdf5')
 parser.add_argument('--results_folder_prefix', default='results_')
 parser.add_argument('--train_from', default='')
 parser.add_argument('--seed', default=0, type=int)
@@ -71,7 +71,7 @@ val_sents = val_data.batch_size.sum()
 test_sents = test_data.batch_size.sum()
 vocab_size = int(train_data.vocab_size)
 vocab = Indexer()
-vocab.load_vocab('../../../../data/ivae/ivae.dict')
+vocab.load_vocab('data/ivae.dict')
 
 print('Train data: %d batches' % len(train_data))
 print('Val data: %d batches' % len(val_data))
@@ -270,10 +270,6 @@ def sample_sentences(decoder, vocab, num_sentences, out_file, reconstruction=Fal
         decoded_sentence = [vocab.idx2word[s] for s in sentence]
         sampled_sents.append(decoded_sentence)
 
-    # for i, sent in enumerate(sampled_sents):
-    #     if reconstruction:
-    #         logging.info(('the %d-th real sent: ') % i + ' '.join(sents[i]))
-    #     logging.info(('the %d-th fake sent: ') % i + ' '.join(sent))
     logging.info(('%d fake sentences made ') % len(sampled_sents))
 
     with open(os.path.join(results_folder, args.out_prefix + str(out_file) + '.txt'), 'w') as fout:
@@ -344,7 +340,6 @@ if args.test:
     logging.info("evaluation:")
     evaluation(test_data)
     sample_sentences(decoder, vocab, num_sentences=4000, out_file='ivae_results_4000', reconstruction=False, data=test_data)
-    # sample_sentences(decoder, vocab, num_sentences=50, reconstruction=True, data=test_data)
     exit()
 
 
@@ -357,7 +352,6 @@ print("evaluation:")
 check_point(epo_0)
 evaluation(val_data)
 sample_sentences(decoder, vocab, num_sentences=4000, out_file=epo_0, reconstruction=False, data=val_data)
-# sample_sentences(decoder, vocab, num_sentences=50, reconstruction=True, data=test_data)
 
 for epo in torch.arange(epo_0 + 1, args.num_epochs + 1):
     logging.info('\n------------------------------------------------------')
@@ -423,5 +417,4 @@ for epo in torch.arange(epo_0 + 1, args.num_epochs + 1):
     check_point(epo)
     evaluation(val_data)
     sample_sentences(decoder, vocab, num_sentences=4000, out_file=epo, reconstruction=False, data=val_data)
-    # sample_sentences(decoder, vocab, num_sentences=50, reconstruction=True, data=test_data)
 print("iVAE took", time.time() - start_time, "to run")

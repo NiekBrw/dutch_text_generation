@@ -1,4 +1,3 @@
-import pickle as cPickle
 import os
 
 # Convert token ID to token

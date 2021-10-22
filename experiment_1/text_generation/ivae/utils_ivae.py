@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
-import sys
-import os
-
-import argparse
-import json
-import random
-import shutil
-
 import torch
-from torch import cuda
-import torch.nn as nn
-
-import torch.nn.functional as F
-import numpy as np
 
 
 def log_bernoulli_loss(pred, y, min_eps=1e-5, max_eps=1. - 1e-5, average=True):
