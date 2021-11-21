@@ -1,3 +1,3 @@
-## Experiment 2
+## Experiment 3
 
-Checking whether adding synthetic text helps to combat class imbalance in a classification task.
+Checking whether using active learning reduces the amount of labeled data needed.
