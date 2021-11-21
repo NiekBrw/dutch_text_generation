@@ -7,9 +7,7 @@
 ```
 
 #### Summary
-Train the iVAE<sub>MI</sub> method on Dutch tweet data.
-
-Task for testing: generate 4000 samples based on the real test data.
+Create 21,000 synthetic texts for Experiments 2 and 3.
 
 #### How to run
 
