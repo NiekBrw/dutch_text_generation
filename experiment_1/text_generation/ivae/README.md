@@ -15,8 +15,7 @@ Task for testing: generate 4000 samples based on the real test data.
 
 Preprocessing
 ```sh
-  python preprocess_ivae.py --trainfile ../../../data/covid_gen_train_text.txt 
-  --valfile ../../../data/covid_gen_val_text.txt --testfile ../../../data/covid_gen_test_text.txt --outputfile ../../../data
+  python preprocess_ivae.py --trainfile ../../../data/covid_gen_train_text.txt --valfile ../../../data/covid_gen_val_text.txt --testfile ../../../data/covid_gen_test_text.txt --outputfile ../../../data
 ```
 
 Training
