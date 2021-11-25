@@ -4,6 +4,7 @@
 ```sh
   augly
   pandas
+  nltk
 ```
 
 #### Summary
