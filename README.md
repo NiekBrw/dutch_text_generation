@@ -10,7 +10,7 @@ For each folder there is a separate README, explaining how to run that part.
 A general overview of the flow of the project can be seen below.
 
 ![Thesis workflow](Workflow.pdf)
-![Thesis workflow](https://github.com/ellenmans/dutch_text_generation/Workflow.pdf?raw=true)
+![Thesis workflow](https://github.com/ellenmans/dutch_text_generation/main/Workflow.pdf?raw=true)
 
 #### Credits
 For this thesis, I used code from multiple GitHub repositories. 
