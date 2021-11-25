@@ -13,7 +13,7 @@ Create 21,000 synthetic texts for Experiments 2 and 3.
 
 Preprocessing
 ```sh
-  python preprocess_ivae_ex2.py --vocabfile data/vocab.dict --testfile data/test.txt --outputfile data
+  python preprocess_ivae_ex2.py --vocabfile ../../../data/vocab.dict --testfile ../../../data/test.txt --outputfile ../../../data
 ```
 
 Generating
