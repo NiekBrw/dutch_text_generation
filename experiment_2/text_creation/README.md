@@ -12,7 +12,7 @@ Create synthetic texts for Experiments 2 and 3.
 
 For both iVAE and AugLy, 21,000 synthetic texts have to be created.
 
-### How to run
+#### How to run
 
 To generate the iVAE synthetic texts, go to *ivae/*.
 
