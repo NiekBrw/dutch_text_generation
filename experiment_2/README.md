@@ -7,3 +7,6 @@ Checking whether adding synthetic text helps to combat class imbalance in a clas
 Start by generating synthetic texts for this experiment in the *text_generation* folder, or by selecting a suitable classifier in *preliminary_experiment/*.
 
 The actual experiment can be found in *classification/*.
+
+#### Credits
+Many thanks to Michiel Bron for helping with the code for this experiment.
