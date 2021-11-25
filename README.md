@@ -9,6 +9,13 @@ For each folder there is a separate README, explaining how to run that part.
 
 A general overview of the flow of the project can be seen below.
 
+![Thesis workflow](Workflow.pdf)
+
 #### Credits
 For this thesis, I used code from multiple GitHub repositories. 
 
+* [ARAML](https://github.com/kepei1106/ARAML)
+* [iVAE<sub>MI</sub>](https://github.com/fangleai/Implicit-LVM)
+* [RelGAN](https://github.com/weilinie/RelGAN)
+
+Also many thanks to Michiel Bron, who helped a lot with the code.
