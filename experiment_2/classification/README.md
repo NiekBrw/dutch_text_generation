@@ -1,21 +1,34 @@
-## Creating Synthetic Text
+## Experiment 2
 
 #### Dependencies
 ```sh
-  augly
+  instancelib
+  python-allib
+  scikit-learn
+  matplotlib
   pandas
-  nltk
 ```
 
 #### Summary
-Create synthetic texts for Experiments 2 and 3.
+Experiment 2, check the effect of using (multiple amounts of) synthetic data on a text classification task.
 
-For both iVAE and AugLy, 21,000 synthetic texts have to be created.
 
 #### How to run
 
-To generate the iVAE synthetic texts, go to *ivae/*.
+Go through *experiment_2_classification.ipynb*
 
-With these raw texts, *ex2_text_generation.ipynb* can be used to clean them, generate AugLy texts and prepare the datasets that will be used in the experiment.
+Note that this is one run of the experiment (one type of synthetic texts, and one amount).
 
-*ex2_text_evaluation.ipynb* evaluates the quality and diversity of the synthetic texts.
+For the experiment this file was used with the following settings:
+
+| Type    | Amount  |
+| :---:   | :-:     |
+| -       | 0       |
+| iVAE    | 1       |
+| iVAE    | 5       |
+| iVAE    | 10      |
+| iVAE    | 15      |
+| AugLy   | 1       |
+| AugLy   | 5       |
+| AugLy   | 10      |
+| AugLy   | 15      |
