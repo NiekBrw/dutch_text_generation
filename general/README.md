@@ -44,9 +44,7 @@ Go through the data_inspection.ipynb notebook.
 #### Summary
 General preprocessing of the data, by removing duplicates and overlap in the majority and minority sets. Also removing emojis and some of the user mentions and hashtags, and only keeping tweets that are between 2 and 40 words after preprocessing.
 
-Experiment 1 preprocessing by replacing tokens with ids for ARAML.
-
-Experiment 2 preprocessing ?
+Experiment 1 specific preprocessing by replacing tokens with ids for ARAML.
 
 Creating all datasets for the experiments.
 
