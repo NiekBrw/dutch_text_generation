@@ -20,3 +20,6 @@ Go through *active_learning.ipynb* to see the effects of active learning.
 Note that this is one run of the experiment, with one type of synthetic texts. In total, three runs were done: baseline (no synthetic texts), iVAE texts, and AugLy texts.
 
 After identifying the minimum amount of labeled data needed, a machine learning baseline can be created using *ML_baseline.ipynb*. This shows whether active learning really needs less or that such a small amount of data would always have worked.
+
+#### Credits
+Many thanks to Michiel Bron for helping with the code for this experiment.
